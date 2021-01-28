@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineWeb</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" 
+    integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="vendors/easings.min.js"></script>
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="fullpage.js"></script>
+ 
+    <div id="fullpage">    
+        </header>
+        <div class="section s1">
+            <header>
+                <a href="#" class="logo "><img src="logo.png"></a>
+                <ul class="navigation">
+                    <li><a href="index.html">Cartelera</a></li>
+                    <li><a href="proximamente.html">Proximos estrenos</a></li>
+                    <li><a href="info.html">Cine</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    
+                </ul>
+               
+            </header>
+            
+            <h1>Primera segunda pelicula</h1>
+        </div>
+        <div class="section s2">
+            <h1>Segunda segunda pelicula</h1>
+        </div>
+        <div class="section s3">
+            <h1>Tercera segunda pelicula</h1>
+        </div>
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" 
+    integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" 
+    crossorigin="anonymous"></script>
+    <script>
+
+            new fullpage('#fullpage', {
+                //options here
+                autoScrolling:true,
+                scrollHorizontally: true
+            });
+
+
+    </script>
+
+</body>
+</html>

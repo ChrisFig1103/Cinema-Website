@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineweb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" 
+    integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+</head>
+<body>
+     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="vendors/easings.min.js"></script>
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="fullpage.js"></script>
+
+
+
+    <div id="fullpage">    
+        <div class="section s1">
+            <header>
+                <a href="#" class="logo "><img src="logo.png"></a>
+                <ul class="navigation">
+                    <li><a href="index.html">Cartelera</a></li>
+                    <li><a href="proximamente.html">Proximos estrenos</a></li>
+                    <li><a href="info.html">Cine</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </header>
+            <h1>Dia</h1>
+        </div>
+        <div class="section s2">
+            <div class="banner">
+                <img src="bg.jpg" class="bg">
+                <div class="content">
+                    <img src="name.png" class="movieTitle">
+                    <h4>
+                        <span>2020</span>
+                        <span><i>12+</i></span>
+                        <span>1h 55min</span>
+                        <span>Action</span>
+                    </h4>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium corporis sint quia asperiores alias ex est 
+                    eius eaque autem necessitatibus sed fugiat labore,
+                    inventore consectetur ipsam sunt unde. Quibusdam, 
+                    temporibus!
+                    </p>
+                    <div class="buttons">
+                        <a href="#"><i class="fa fa-play" aria-hidden="true"> Play</i></a>
+                        <a href="#"><i class="fa fa-plus" aria-hidden="true"> My List</i></a>
+                    </div>
+                </div>
+                <a class="play" onclick="toggleVideo();"><img src="play.png" >Watch Trailer</a>
+            </div>
+        
+            <div class="trailer">
+                <video src="trailer.mp4" controls="true"></video>
+                <img src="close.png" class="close" onclick="toggleVideo();">
+            </div>
+        </div>
+        <div class="section s3">
+            <h2>Pelicula tres</h2>
+        </div>
+    </div>
+
+
+
+
+
+   
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" 
+    integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" 
+    crossorigin="anonymous"></script>
+    <script>
+        
+
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+
+        new fullpage('#fullpage', {
+                //options here
+                autoScrolling:true,
+                scrollHorizontally: true
+            });
+
+
+    </script>
+
+
+
+</body>
+</html>

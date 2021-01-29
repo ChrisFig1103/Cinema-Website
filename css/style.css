@@ -173,6 +173,94 @@ header .logo img{
     max-width: 32px;
 }
 
+
+
+ 
+
+.contact-in{
+    width: 80%;
+    height: 62%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+}
+
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+
+.contact-map iframe{
+    width: 100%;
+    height: 70%;
+}
+
+.contact-txt{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    text-align: center;
+}
+.contact-txt h1{
+    margin-bottom: 10px;
+    margin-bottom: 120px;
+    color: black;
+}
+.contact-txt-txt{
+    width: 100%;
+    height: 40px;
+    color: #000;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    padding-bottom: 300px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 991px){
     header{
         padding: 20px 50px;

@@ -7,19 +7,22 @@
     font-family: 'Poppins',sans-serif;
 }
 
-
-
+h1{
+    color: white;
+}
+body{
+    background: #000;
+}
 
 /*  ------------------- DAY PICKER ------------------ */
 section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #d7fe3a;
+    background: #de0611;;
     overflow: hidden;
     display: flex;
 }
-
 .sec{
     position: relative;
     width: 50%;
@@ -29,23 +32,27 @@ section{
     justify-content: center;
     align-items: center;
 }
-
 .sec1 h2{
     color: #fff;
     font-size: 16vw;
     font-weight: 800;
     line-height: 1em;
 }
-
+#day > i{
+    font-size: 12vw;
+    cursor: pointer;
+}
 .sec2{
     background:  #de0611;
 }
-
 .sec2 h2{
     color: #000;
-    font-size: 8vw;
+    font-size: 6vw;
 }
-
+#month > i{
+    font-size: 5vw;
+    cursor: pointer;
+}
 #year{
     position: absolute;
     top: 80px;
@@ -54,8 +61,6 @@ section{
     font-size: 6vw;
     font-weight: 700;
 }
-
- 
 @keyframes animate{
     0%,15%{
         opacity: 0;
@@ -65,7 +70,6 @@ section{
 
     }
 }
-
 @media(max-width: 768px){
     section{
         flex-direction:column;
@@ -74,55 +78,17 @@ section{
         width: 100%;
         height: 50%;
     }
-
     .sec h2{
         font-size: 35vw;
     }
-    
     #ampm{
         top: 20px;
         right: 20px;
     }
-
 }
 /*  -------------------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1{
-    color: white;
-}
-body{
-    background: #000;
-}
-
+/*  ------------------- MENU ------------------ */
 header{
     position: absolute;
     top: 0;
@@ -131,7 +97,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
+    padding: 30px 190px;
     z-index: 100;
 }
 
@@ -158,7 +124,9 @@ header .logo img{
 .navigation li:hover a{
     color: #de0611;
 }
+/*  -------------------------------------------------------- */
 
+/*  ------------------- BANNER/FILM ------------------ */
 .banner{
     position: relative;
     width: 100%;
@@ -169,46 +137,36 @@ header .logo img{
     align-items: center;
    
 }
-
 .banner .bg{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    
+    object-fit: cover;   
 }
-
 .content{
     position: relative;
     z-index: 1;
     max-width: 550px;
 }
-
 .movieTitle{
     max-width: 250px;
 }
-
 .banner .content h4{
     color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
 }
-
 .banner .content h4 span{
     padding: 0 10px;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 .banner .content h4 span:first-child{
     padding-left: 0;
 }
-
- 
 .banner .content h4 span:last-child{
     border-right: none;
 }
-
 .banner .content h4 span i {
     background:#de0611;
     color: #fff;
@@ -217,7 +175,6 @@ header .logo img{
     font-style: normal;
     border-radius: 2px;
 }
-
 .banner .content p{
     font-size: 1em;
     font-weight: 300;
@@ -225,7 +182,6 @@ header .logo img{
     color: #fff;
     margin: 10px 0 20px;
 }
-
 .play{
     position: absolute;
     bottom: 50px;
@@ -241,12 +197,10 @@ header .logo img{
     font-size: 1.2em;
     cursor: pointer;
 }
-
 .play img{
     margin-right: 10px;
     max-width: 50px;
 }
-
 .trailer{
     position: fixed;
     top: 50%;
@@ -262,17 +216,14 @@ header .logo img{
     visibility: hidden;
     opacity: 0;
 }
-
 .trailer.active{
     visibility: visible;
     opacity: 1;
 }
-
 .trailer video{
     max-width: 900px;
     outline: none;
 }
-
 .close{
     position: absolute;
     top: 30px;
@@ -281,93 +232,6 @@ header .logo img{
     filter: invert(1);
     max-width: 32px;
 }
-
-
-
- 
-
-.contact-in{
-    width: 80%;
-    height: 70%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0px 0px 10px 0px #666;
-}
-
-.contact-map{
-    width: 100%;
-    height: auto;
-    flex: 50%;
-}
-
-.contact-map iframe{
-    width: 100%;
-    height: 70%;
-}
-
-.contact-txt{
-    width: 100%;
-    height: auto;
-    flex: 50%;
-    text-align: center;
-}
-.contact-txt h1{
-    margin-bottom: 10px;
-    margin-bottom: 120px;
-    color: black;
-}
-.contact-txt-txt{
-    width: 100%;
-    height: 40px;
-    color: #000;
-    outline: none;
-    margin-bottom: 20px;
-    padding: 15px;
-    padding-bottom: 300px;
-}
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 991px){
@@ -417,6 +281,134 @@ header .logo img{
         bottom: 30px;
     }
 }
+/*  -------------------------------------------------------- */
+
+/*  ------------------- ABOUT THEATER ------------------ */
+.container-about img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#cinema-txt{
+    color: white;
+    font-size: 3em;
+}
+
+
+.grid-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    background-color: #000;
+    column-count: 4;
+    column-gap: 10px;
+}
+  
+.grid-container img {
+    max-width: 100%;
+    display: block;
+}
+  
+.grid-container figure {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+  
+.grid-container figure > img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
+  
+
+ 
+/*  -------------------------------------------------------- */
+
+/*  ------------------- UBICATION  ------------------ */
+.contact-in{
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+}
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 70%;
+}
+.contact-txt{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    text-align: center;
+}
+.contact-txt h1{
+    margin-bottom: 10px;
+    margin-bottom: 120px;
+    color: black;
+}
+.contact-txt-txt{
+    width: 100%;
+    height: 40px;
+    color: #000;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    padding-bottom: 300px;
+}
+ /*  -------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

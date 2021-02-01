@@ -396,13 +396,16 @@ header .logo img{
 
 
 .heading{
-    padding: 50px;
+    padding: 3%;
+    background: red;
+    border-radius: 10px;
     color: white;
     font-size: 2em;
+    margin: 0 2% 0 2%;
 }
 .text{
-    margin-bottom: 20px;
-    margin-top: 5px;
+    margin-bottom: 3%;
+    margin-top: 1%;
 }
 
 

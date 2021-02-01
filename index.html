@@ -42,12 +42,16 @@
             </header>
             <section>
                 <div class="sec sec1">
-                    <h2 id="day"> <i class="fas fa-chevron-left" id="dayLeft"></i> 29 <i class="fas fa-chevron-right" id="dayRight"></i></h2>  
+                    <i class="fas fa-chevron-left" id="dayLeft"></i>
+                    <h2 id="day">   </i></h2>  
+                    <i class="fas fa-chevron-right" id="dayRight"></i>
                 </div>
                 <div class="sec sec2" id="BackGround">
-                    <h2 id="month"><i class="fas fa-chevron-left" id="monthLeft"></i> Septiembre <i class="fas fa-chevron-right" id="monthRight"></i> </h2>
+                    <i class="fas fa-chevron-left" id="monthLeft"></i>
+                    <h2 id="month">  </h2>
+                    <i class="fas fa-chevron-right" id="monthRight"></i>
                     
-                    <span id="year">2020</span>
+                    <span id="year"></span>
                 </div>
             </section>
         </div>
@@ -121,7 +125,71 @@
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/pages.js"></script>
     <script>
-        
+
+
+        let myDate = new Date();
+        let month_array = new Array();
+        month_array[0] = "Enero";
+        month_array[1] = "Febrero";
+        month_array[2] = "Marzo";
+        month_array[3] = "Abril";
+        month_array[4] = "Mayo";
+        month_array[5] = "Junio";
+        month_array[6] = "Julio";
+        month_array[7] = "Agosto";
+        month_array[8] = "Septiembre";
+        month_array[9] = "Octubre";
+        month_array[10] = "Noviembre";
+        month_array[11] = " Diciembre";
+
+        let dayoftheweek_array = new Array();
+        dayoftheweek_array[0] = "Domingo";
+        dayoftheweek_array[1] = "Lunes";
+        dayoftheweek_array[2] = "Martes"; 
+        dayoftheweek_array[3] = "Miercoles"; 
+        dayoftheweek_array[4] = "Jueves"; 
+        dayoftheweek_array[5] = "Viernes"; 
+        dayoftheweek_array[6] = "Sabado"; 
+
+        let year = myDate.getFullYear();
+        let month = myDate.getMonth();
+        let month_string = month_array[myDate.getMonth()];
+        let dayoftheweek_string = dayoftheweek_array[myDate.getDay()];
+        let dayoftheweek = myDate.getDay();
+        let day = myDate.getDate();
+        function modifyDate(){
+            document.getElementById("day").innerText = day;
+            document.getElementById("month").innerText = month_string;
+            document.getElementById("year").innerText = year;
+        }
+
+        document.getElementById("dayLeft").addEventListener('click',function(){
+            day = day--;
+            modifyDate();
+        })
+        document.getElementById("dayRight").addEventListener('click',function(){
+            day = day++;
+            modifyDate();
+        })
+        document.getElementById("monthLeft").addEventListener('click',function(){
+            if (month == 0){
+                month = 12;
+            }else{
+                month = month--;
+            }
+            modifyDate();
+        })
+        document.getElementById("monthRight").addEventListener('click',function(){
+            if (month == 12){
+                month = 1;
+            }else{
+                month = month++;
+            }
+            modifyDate();
+        })
+        window.onload = function() {
+            modifyDate();
+        };
 
         function toggleVideo(){
             const trailer = document.querySelector('.trailer');
@@ -131,32 +199,8 @@
             video.pause();
         }
 
-      
-
-        let leftDay = document.getElementById("dayLeft");
-        let rightDay = document.getElementById("dayRight");
-        let leftMonth = document.getElementById("monthLeft");
-        let rightMonth = document.getElementById("monthRight");
-        let Day = document.getElementById("day").innerText;
-        let Month = document.getElementById("month").innerText;
-        let Year = document.getElementById("year").innerText;
-
-
-        leftDay.addEventListener("click",()=>{  
-          
-            console.log(Day--)
-        })
-        rightDay.addEventListener("click",()=>{
-            console.log(Day++)
-            Day = parseInt(Day++);
-             
-        })
-        leftMonth.addEventListener("click",()=>{
-            Month = Month--;
-        })
-        rightMonth.addEventListener("click",()=>{
-            Month = Month++;
-        })
+  
+     
     </script>
 
 

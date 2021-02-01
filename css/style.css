@@ -38,10 +38,16 @@ section{
     font-weight: 800;
     line-height: 1em;
 }
-#day > i{
+
+.sec.sec1 i{
+    color: #fff;
+    font-weight: 800;
+    line-height: 1em;
     font-size: 12vw;
     cursor: pointer;
 }
+ 
+
 .sec2{
     background:  #de0611;
 }
@@ -49,10 +55,11 @@ section{
     color: #000;
     font-size: 6vw;
 }
-#month > i{
+.sec2 i {
     font-size: 5vw;
     cursor: pointer;
 }
+ 
 #year{
     position: absolute;
     top: 80px;

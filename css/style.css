@@ -395,11 +395,21 @@ header .logo img{
 
 
 
+.heading{
+    padding: 50px;
+    color: white;
+    font-size: 2em;
+}
+.text{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
 
 
-
-
-
+.faqs{
+    padding: 50px;
+    color: white;
+}
 
 
 

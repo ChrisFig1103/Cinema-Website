@@ -124,69 +124,65 @@
     integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" 
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/pages.js"></script>
-    <script>
-
-
-        let myDate = new Date();
-        let month_array = new Array();
-        month_array[0] = "Enero";
-        month_array[1] = "Febrero";
-        month_array[2] = "Marzo";
-        month_array[3] = "Abril";
-        month_array[4] = "Mayo";
-        month_array[5] = "Junio";
-        month_array[6] = "Julio";
-        month_array[7] = "Agosto";
-        month_array[8] = "Septiembre";
-        month_array[9] = "Octubre";
-        month_array[10] = "Noviembre";
-        month_array[11] = " Diciembre";
-
-        let dayoftheweek_array = new Array();
-        dayoftheweek_array[0] = "Domingo";
-        dayoftheweek_array[1] = "Lunes";
-        dayoftheweek_array[2] = "Martes"; 
-        dayoftheweek_array[3] = "Miercoles"; 
-        dayoftheweek_array[4] = "Jueves"; 
-        dayoftheweek_array[5] = "Viernes"; 
-        dayoftheweek_array[6] = "Sabado"; 
-
-        let year = myDate.getFullYear();
-        let month = myDate.getMonth();
-        let month_string = month_array[myDate.getMonth()];
-        let dayoftheweek_string = dayoftheweek_array[myDate.getDay()];
-        let dayoftheweek = myDate.getDay();
-        let day = myDate.getDate();
+    <script> 
+        let myDate = new Date();       
         function modifyDate(){
+           
+            let month_array = new Array();
+            month_array[0] = "Enero";
+            month_array[1] = "Febrero";
+            month_array[2] = "Marzo";
+            month_array[3] = "Abril";
+            month_array[4] = "Mayo";
+            month_array[5] = "Junio";
+            month_array[6] = "Julio";
+            month_array[7] = "Agosto";
+            month_array[8] = "Septiembre";
+            month_array[9] = "Octubre";
+            month_array[10] = "Noviembre";
+            month_array[11] = " Diciembre";
+
+            let dayoftheweek_array = new Array();
+            dayoftheweek_array[0] = "Domingo";
+            dayoftheweek_array[1] = "Lunes";
+            dayoftheweek_array[2] = "Martes"; 
+            dayoftheweek_array[3] = "Miercoles"; 
+            dayoftheweek_array[4] = "Jueves"; 
+            dayoftheweek_array[5] = "Viernes"; 
+            dayoftheweek_array[6] = "Sabado"; 
+
+            let year = myDate.getFullYear();
+            let month = myDate.getMonth();
+            let month_string = month_array[myDate.getMonth()];
+            let dayoftheweek_string = dayoftheweek_array[myDate.getDay()];
+            let dayoftheweek = myDate.getDay();
+            let day = myDate.getDate();
+
             document.getElementById("day").innerText = day;
             document.getElementById("month").innerText = month_string;
             document.getElementById("year").innerText = year;
         }
 
         document.getElementById("dayLeft").addEventListener('click',function(){
-            day = day--;
+            myDate.setDate(myDate.getDate()-1)
             modifyDate();
         })
+
         document.getElementById("dayRight").addEventListener('click',function(){
-            day = day++;
+            myDate.setDate(myDate.getDate()+1)
             modifyDate();
         })
+
         document.getElementById("monthLeft").addEventListener('click',function(){
-            if (month == 0){
-                month = 12;
-            }else{
-                month = month--;
-            }
+            myDate.setMonth(myDate.getMonth()-1)
             modifyDate();
         })
+
         document.getElementById("monthRight").addEventListener('click',function(){
-            if (month == 12){
-                month = 1;
-            }else{
-                month = month++;
-            }
+            myDate.setMonth(myDate.getMonth()+1)
             modifyDate();
         })
+
         window.onload = function() {
             modifyDate();
         };
